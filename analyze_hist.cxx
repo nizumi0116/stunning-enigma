@@ -9,7 +9,7 @@
   void GetParameters(TFile* file, int xstart, int xstop, int ystart, int ystop);
 
 //Choose the root file you are going to analyze
-  TFile* file1 = new TFile("run_671_analysis_fr.root");
+  TFile* file1 = new TFile("run_491_analysis.root");
 
 //measurement points along x-axis, y-axis
 int xnum=9;
@@ -63,7 +63,7 @@ void analyze_hist(){
  
   cout << "center position: " << centerx << " " << centery << " " << centerz << "\n";
 
-    GetParameters(file1, 90, 170, 0, 70);
+    GetParameters(file1, 157, 237, 20, 90);
 
     //prepare histograms
     par4rH = new TH2D("", "",  xnum, XPos[0], XPos[0]+90, ynum, YPos[0], YPos[0]+80);
